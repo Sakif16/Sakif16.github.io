@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="teal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Sakib Muhtasim</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)',
+            panel: 'var(--panel)',
+            ink: 'var(--ink)',
+            dim: 'var(--dim)',
+            accent: 'var(--accent)',
+            line: 'var(--line)'
+          },
+          fontFamily: {
+            display: ['"Chakra Petch"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="js/main.js"></script>
+</head>
+
+<body class="min-h-screen font-mono text-[15px] leading-relaxed">
+
+  <!-- ===== Header ===== -->
+  <header class="max-w-4xl mx-auto px-5 pt-6">
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="font-display font-bold text-lg tracking-wide">
+        <span class="text-accent">sakib@portfolio</span><span class="text-dim">:~$</span>
+      </a>
+
+      <div class="flex items-center gap-2" role="group" aria-label="Color theme">
+        <button class="theme-dot" style="background:#2dd4bf" data-set-theme="teal"   aria-label="Teal theme"   title="Teal"></button>
+        <button class="theme-dot" style="background:#39ff88" data-set-theme="matrix" aria-label="Green theme"  title="Green"></button>
+        <button class="theme-dot" style="background:#ffb000" data-set-theme="amber"  aria-label="Amber theme"  title="Amber"></button>
+        <button class="theme-dot" style="background:#ff4d5e" data-set-theme="red"    aria-label="Red theme"    title="Red"></button>
+      </div>
+    </div>
+
+    <nav class="mt-4 flex gap-5 overflow-x-auto whitespace-nowrap border-b border-line pb-3 text-sm" aria-label="Main">
+      <a href="index.html" class="text-dim hover:text-accent">home</a>
+      <a href="experience.html" class="text-accent">experience</a>
+      <a href="education.html" class="text-dim hover:text-accent">education</a>
+      <a href="research.html" class="text-dim hover:text-accent">research</a>
+      <a href="projects.html" class="text-dim hover:text-accent">projects</a>
+      <a href="skills.html" class="text-dim hover:text-accent">skills</a>
+      <a href="awards.html" class="text-dim hover:text-accent">awards</a>
+      <a href="co-curricular.html" class="text-dim hover:text-accent">co-curricular</a>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 pt-12 pb-16">
+
+    <!-- ===== Terminal frame (page content goes inside) ===== -->
+    <section class="border border-line bg-panel" aria-label="Experience">
+      <div class="flex items-center gap-2 border-b border-line px-4 py-2 text-xs text-dim">
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="ml-2">sakib@portfolio: ~/experience</span>
+      </div>
+
+      <div class="px-5 py-6 sm:px-6">
+
+        <article class="mb-8">
+          <h2 class="font-display font-bold text-lg text-accent">Role Title</h2>
+          <p class="text-sm text-dim">Company or Organization, Dhaka | 2025 - Present</p>
+          <p class="mt-2 text-ink max-w-prose">
+            One or two sentences on what you did and what you built.
+          </p>
+        </article>
+
+        <article>
+          <h2 class="font-display font-bold text-lg text-accent">Another Role</h2>
+          <p class="text-sm text-dim">Company or Organization | 2024 - 2025</p>
+          <p class="mt-2 text-ink max-w-prose">
+            Copy this block for each new entry.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-5 pb-10 text-sm text-dim border-t border-line pt-5">
+    © 2026 Sakib Muhtasim
+  </footer>
+
+</body>
+</html>
