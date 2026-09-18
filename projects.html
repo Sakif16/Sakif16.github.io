@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="teal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Sakib Muhtasim</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)',
+            panel: 'var(--panel)',
+            ink: 'var(--ink)',
+            dim: 'var(--dim)',
+            accent: 'var(--accent)',
+            line: 'var(--line)'
+          },
+          fontFamily: {
+            display: ['"Chakra Petch"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="js/main.js"></script>
+</head>
+
+<body class="min-h-screen font-mono text-[15px] leading-relaxed">
+
+  <!-- ===== Header ===== -->
+  <header class="max-w-4xl mx-auto px-5 pt-6">
+    <div class="flex items-center justify-between gap-4">
+      <a href="index.html" class="font-display font-bold text-lg tracking-wide">
+        <span class="text-accent">sakib@portfolio</span><span class="text-dim">:~$</span>
+      </a>
+
+      <div class="flex items-center gap-2" role="group" aria-label="Color theme">
+        <button class="theme-dot" style="background:#2dd4bf" data-set-theme="teal"   aria-label="Teal theme"   title="Teal"></button>
+        <button class="theme-dot" style="background:#39ff88" data-set-theme="matrix" aria-label="Green theme"  title="Green"></button>
+        <button class="theme-dot" style="background:#ffb000" data-set-theme="amber"  aria-label="Amber theme"  title="Amber"></button>
+        <button class="theme-dot" style="background:#ff4d5e" data-set-theme="red"    aria-label="Red theme"    title="Red"></button>
+      </div>
+    </div>
+
+    <nav class="mt-4 flex gap-5 overflow-x-auto whitespace-nowrap border-b border-line pb-3 text-sm" aria-label="Main">
+      <a href="index.html" class="text-dim hover:text-accent">home</a>
+      <a href="experience.html" class="text-dim hover:text-accent">experience</a>
+      <a href="education.html" class="text-dim hover:text-accent">education</a>
+      <a href="research.html" class="text-dim hover:text-accent">research</a>
+      <a href="projects.html" class="text-accent">projects</a>
+      <a href="skills.html" class="text-dim hover:text-accent">skills</a>
+      <a href="awards.html" class="text-dim hover:text-accent">awards</a>
+      <a href="co-curricular.html" class="text-dim hover:text-accent">co-curricular</a>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 pt-12 pb-16">
+
+    <!-- ===== Terminal frame (page content goes inside) ===== -->
+    <section class="border border-line bg-panel" aria-label="Projects">
+      <div class="flex items-center gap-2 border-b border-line px-4 py-2 text-xs text-dim">
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
+        <span class="ml-2">sakib@portfolio: ~/projects</span>
+      </div>
+
+      <div class="px-5 py-6 sm:px-6">
+        <div class="space-y-6">
+
+          <!-- Copy this whole <article> block for each new project -->
+
+          <!-- NoboJatra (in development: blinking red dot) -->
+          <article class="border border-line p-5">
+            <div class="flex flex-wrap items-center gap-3">
+              <h2 class="font-display font-bold text-xl">NoboJatra</h2>
+              <span class="flex items-center gap-2" title="Currently in development">
+                <span class="relative inline-flex h-2.5 w-2.5">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff4d5e] opacity-75 motion-reduce:animate-none"></span>
+                  <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#ff4d5e]"></span>
+                </span>
+                <span class="text-xs text-dim">In development</span>
+              </span>
+            </div>
+            <p class="mt-2 max-w-prose text-ink">
+              A smart travel-planning web app for comparing routes, estimating fares, checking live conditions, and saving repeat journeys, all in one place.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Next.js (App Router)</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">TypeScript</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Tailwind CSS</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">BetterAuth</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">MongoDB</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Mongoose</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">OpenRouteService</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">OpenWeatherMap</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Resend</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://nobojatra.onrender.com" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">Live</a>
+              <a href="https://github.com/Sakif16/nobojatra.com" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Surveillance-UGV-Type-0 -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">Surveillance-UGV-Type-0</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              An extremely cost-effective and recyclable autonomous surveillance UGV that patrols, detects motion, and follows objects and threats in real time, designed for surveillance and reconnaissance applications.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Arduino</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">C/C++</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Motor control libraries</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Sensor integration</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Embedded systems</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://github.com/Sakif16/Surveillance-UGV-Type-0" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+              <a href="https://youtu.be/xMGt-dS8Khw" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">YouTube demo</a>
+            </div>
+          </article>
+
+          <!-- Khoroch -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">Khoroch</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              A family expense tracking web app where members can join a shared group, log their spending, and view each other's expenses transparently, month by month.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Next.js (App Router)</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">TypeScript</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Tailwind CSS</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">BetterAuth</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">MongoDB</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Mongoose</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Render</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://khoroch.onrender.com" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">Live</a>
+              <a href="https://github.com/Sakif16/khoroch" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+            </div>
+          </article>
+
+          <!-- is-real-arcade-bomber -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">is-real-arcade-bomber</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              A 3D arcade bomber game where you pilot a B-2 Spirit stealth bomber over Tel-Aviv, Israel. Drop bombs on targets, collect power-ups, and survive enemy air defences.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Python</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">PyOpenGL</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">PyOpenGL-accelerate</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://github.com/Sakif16/is-real-arcade-bomber" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+              <a href="https://youtu.be/_eX3l-xc9ho" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">YouTube demo</a>
+            </div>
+          </article>
+
+          <!-- Study Buddy -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">Study Buddy</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              A web-based study management and productivity platform designed to help students organize tasks, improve focus, collaborate with classmates, and build productive study habits.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">MongoDB</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Express.js</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">React.js</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Node.js</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">TypeScript</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Prisma</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Zod</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Biome</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://study-buddy-pqwb.onrender.com" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">Live</a>
+              <a href="https://github.com/Sakif16/study-buddy" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Moosik -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">Moosik</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              A simple retro-styled desktop music player built with Electron, where every folder of MP3s automatically becomes its own playlist.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Electron</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Node.js</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">HTML / CSS / JavaScript</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">electron-builder</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://github.com/Sakif16/moosik" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+            </div>
+          </article>
+
+          <!-- OctoLoad -->
+          <article class="border border-line p-5">
+            <h2 class="font-display font-bold text-xl">OctoLoad</h2>
+            <p class="mt-2 max-w-prose text-ink">
+              A simple command-line tool to download YouTube videos or convert them into high-quality MP3 files.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">Python</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">yt-dlp</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">FFmpeg</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">pyfiglet</span>
+              <span class="border border-line px-2 py-0.5 text-xs text-dim">colorama</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href="https://github.com/Sakif16/octoloader" target="_blank" rel="noopener noreferrer" class="border border-line px-3 py-1 hover:bg-panel hover:border-accent">GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-5 pb-10 text-sm text-dim border-t border-line pt-5">
+    © 2026 Sakib Muhtasim
+  </footer>
+
+</body>
+</html>
