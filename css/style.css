@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 /* ---------- Themes (switch with the dots, top right) ---------- */
-:root, [data-theme="teal"]  { --bg:#070b12; --panel:#0c131d; --ink:#d3e6ec; --dim:#7d939e; --accent:#2dd4bf; }
-[data-theme="matrix"]       { --bg:#050a06; --panel:#09130b; --ink:#d5f5dd; --dim:#6f9077; --accent:#39ff88; }
-[data-theme="amber"]        { --bg:#0b0803; --panel:#140f05; --ink:#f3e4c4; --dim:#9a8660; --accent:#ffb000; }
-[data-theme="red"]          { --bg:#0c0709; --panel:#160c0f; --ink:#f0d9dc; --dim:#9a7880; --accent:#ff4d5e; }
+html, html[data-theme="teal"] { --bg:#070b12; --panel:#0c131d; --ink:#d3e6ec; --dim:#7d939e; --accent:#2dd4bf; }
+html[data-theme="matrix"]     { --bg:#050a06; --panel:#09130b; --ink:#d5f5dd; --dim:#6f9077; --accent:#39ff88; }
+html[data-theme="amber"]      { --bg:#0b0803; --panel:#140f05; --ink:#f3e4c4; --dim:#9a8660; --accent:#ffb000; }
+html[data-theme="red"]        { --bg:#0c0709; --panel:#160c0f; --ink:#f0d9dc; --dim:#9a7880; --accent:#ff4d5e; }
 
-:root { --line: color-mix(in srgb, var(--accent) 24%, transparent); }
-
-html { background: var(--bg); }
+html { --line: color-mix(in srgb, var(--accent) 24%, transparent); background: var(--bg); }
 
 body {
   background-color: var(--bg);
@@ -62,6 +60,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   height: 14px;
   border-radius: 9999px;
   border: 1px solid var(--line);
+  cursor: pointer;
+}
+.theme-dot[aria-pressed="true"] {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,9 +1,32 @@
+/* Runs immediately (the script tag goes in <head>) so there's no flash of the wrong theme. */
+const root = document.documentElement;
+root.classList.add('js');
+
 const THEMES = ['teal', 'matrix', 'amber', 'red'];
 
+/* ---------- Theme switcher ---------- */
+function applyTheme(name) {
+  if (!THEMES.includes(name)) return;
+  root.setAttribute('data-theme', name);
+  document.querySelectorAll('[data-set-theme]').forEach(btn => {
+    btn.setAttribute('aria-pressed', String(btn.dataset.setTheme === name));
+  });
+}
+
+// Restore the saved theme right away
 try {
   const saved = localStorage.getItem('theme');
-  if (THEMES.includes(saved)) root.dataset.theme = saved;
+  if (THEMES.includes(saved)) root.setAttribute('data-theme', saved);
 } catch (e) {}
+
+// One click listener for the whole page, so it works no matter when the buttons load
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-set-theme]');
+  if (!btn) return;
+  const name = btn.dataset.setTheme;
+  applyTheme(name);
+  try { localStorage.setItem('theme', name); } catch (err) {}
+});
 
 /* ---------- Typing animation ---------- */
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -14,7 +37,7 @@ async function load() {
   const paras = [...document.querySelectorAll('[data-type]')];
   if (!photo && !paras.length) return;
 
-
+  // Hide every paragraph until it's its turn, so there are no empty gaps
   const texts = paras.map(p => {
     const t = p.textContent.trim();
     p.textContent = '';
@@ -43,15 +66,8 @@ async function load() {
   }
 }
 
-
+/* ---------- Start once the page is ready ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme dots
-  document.querySelectorAll('[data-set-theme]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      root.dataset.theme = btn.dataset.setTheme;
-      try { localStorage.setItem('theme', btn.dataset.setTheme); } catch (e) {}
-    });
-  });
-
+  applyTheme(root.getAttribute('data-theme') || 'teal');
   load();
 });
