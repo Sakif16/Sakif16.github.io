@@ -6,186 +6,153 @@
   <title>Skills | Sakib Muhtasim</title>
 
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: 'var(--bg)',
-            panel: 'var(--panel)',
-            ink: 'var(--ink)',
-            dim: 'var(--dim)',
-            accent: 'var(--accent)',
-            line: 'var(--line)'
-          },
-          fontFamily: {
-            display: ['"Chakra Petch"', 'system-ui', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-
   <script src="js/main.js"></script>
 </head>
 
-<body class="min-h-screen font-mono text-[15px] leading-relaxed">
+<body>
 
-  <!-- ===== Header ===== -->
-  <header class="max-w-4xl mx-auto px-5 pt-6">
-    <div class="flex items-center justify-between gap-4">
-      <a href="index.html" class="font-display font-bold text-lg tracking-wide">
-        <span class="text-accent">sakib@portfolio</span><span class="text-dim">:~$</span>
-      </a>
+  <header class="wrap site-header">
+    <div class="topbar">
+      <a href="index.html" class="brand"><span class="accent">sakib@portfolio</span><span class="dim">:~$</span></a>
 
-      <div class="flex items-center gap-2" role="group" aria-label="Color theme">
-        <button class="theme-dot" style="background:#2dd4bf" data-set-theme="teal"   aria-label="Teal theme"   title="Teal"></button>
-        <button class="theme-dot" style="background:#39ff88" data-set-theme="matrix" aria-label="Green theme"  title="Green"></button>
-        <button class="theme-dot" style="background:#ffb000" data-set-theme="amber"  aria-label="Amber theme"  title="Amber"></button>
-        <button class="theme-dot" style="background:#ff4d5e" data-set-theme="red"    aria-label="Red theme"    title="Red"></button>
+      <div class="themes" role="group" aria-label="Color theme">
+        <button class="theme-dot" style="background:#2dd4bf" data-set-theme="teal"   aria-label="Teal theme"  title="Teal"></button>
+        <button class="theme-dot" style="background:#39ff88" data-set-theme="matrix" aria-label="Green theme" title="Green"></button>
+        <button class="theme-dot" style="background:#ffb000" data-set-theme="amber"  aria-label="Amber theme" title="Amber"></button>
+        <button class="theme-dot" style="background:#ff4d5e" data-set-theme="red"    aria-label="Red theme"   title="Red"></button>
       </div>
     </div>
 
-    <nav class="mt-4 flex gap-5 overflow-x-auto whitespace-nowrap border-b border-line pb-3 text-sm" aria-label="Main">
-      <a href="index.html" class="text-dim hover:text-accent">home</a>
-      <a href="experience.html" class="text-dim hover:text-accent">experience</a>
-      <a href="education.html" class="text-dim hover:text-accent">education</a>
-      <a href="research.html" class="text-dim hover:text-accent">research</a>
-      <a href="projects.html" class="text-dim hover:text-accent">projects</a>
-      <a href="skills.html" class="text-accent">skills</a>
-      <a href="awards.html" class="text-dim hover:text-accent">awards</a>
-      <a href="co-curricular.html" class="text-dim hover:text-accent">co-curricular</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">home</a>
+      <a href="experience.html">experience</a>
+      <a href="education.html">education</a>
+      <a href="research.html">research</a>
+      <a href="projects.html">projects</a>
+      <a href="skills.html" class="active">skills</a>
+      <a href="awards.html">awards</a>
+      <a href="co-curricular.html">co-curricular</a>
     </nav>
   </header>
 
-  <main class="max-w-4xl mx-auto px-5 pt-12 pb-16">
+  <main class="wrap">
 
-    <!-- ===== Terminal frame (page content goes inside) ===== -->
-    <section class="border border-line bg-panel" aria-label="Skills">
-      <div class="flex items-center gap-2 border-b border-line px-4 py-2 text-xs text-dim">
-        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
-        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
-        <span class="inline-block h-2.5 w-2.5 rounded-full bg-line"></span>
-        <span class="ml-2">sakib@portfolio: ~/skills</span>
+    <section class="terminal" aria-label="Skills">
+      <div class="terminal-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="title">sakib@portfolio: ~/skills</span>
       </div>
 
-      <div class="px-5 py-6 sm:px-6">
+      <div class="terminal-body">
 
         <!-- ===== Technical Skills ===== -->
-        <h2 class="font-display font-bold text-xl text-accent">Technical Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
 
-        <dl class="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-[11rem_1fr]">
-
-          <dt class="text-sm text-dim">Programming Languages</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Python</span>
-            <span class="border border-line px-2 py-0.5 text-xs">JavaScript</span>
-            <span class="border border-line px-2 py-0.5 text-xs">C++</span>
-            <span class="border border-line px-2 py-0.5 text-xs">C</span>
+        <dl class="groups">
+          <dt>Programming Languages</dt>
+          <dd>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">C++</span>
+            <span class="tag">C</span>
           </dd>
 
-          <dt class="text-sm text-dim">Web Frameworks</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Next.js</span>
-            <span class="border border-line px-2 py-0.5 text-xs">TanStack</span>
-            <span class="border border-line px-2 py-0.5 text-xs">React</span>
+          <dt>Web Frameworks</dt>
+          <dd>
+            <span class="tag">Next.js</span>
+            <span class="tag">TanStack</span>
+            <span class="tag">React</span>
           </dd>
 
-          <dt class="text-sm text-dim">Databases and ORMs</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">MySQL</span>
-            <span class="border border-line px-2 py-0.5 text-xs">MongoDB</span>
-            <span class="border border-line px-2 py-0.5 text-xs">NeonDB</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Drizzle</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Prisma</span>
+          <dt>Databases and ORMs</dt>
+          <dd>
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">NeonDB</span>
+            <span class="tag">Drizzle</span>
+            <span class="tag">Prisma</span>
           </dd>
 
-          <dt class="text-sm text-dim">Hosting and Services</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Render</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Vercel</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Cloudflare</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Stripe</span>
+          <dt>Hosting and Services</dt>
+          <dd>
+            <span class="tag">Render</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Cloudflare</span>
+            <span class="tag">Stripe</span>
           </dd>
 
-          <dt class="text-sm text-dim">AI and Data</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">TensorFlow</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Keras</span>
-            <span class="border border-line px-2 py-0.5 text-xs">pandas</span>
+          <dt>AI and Data</dt>
+          <dd>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Keras</span>
+            <span class="tag">pandas</span>
           </dd>
 
-          <dt class="text-sm text-dim">Version Control</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">GitHub</span>
-            <span class="border border-line px-2 py-0.5 text-xs">GitLab</span>
+          <dt>Version Control</dt>
+          <dd>
+            <span class="tag">GitHub</span>
+            <span class="tag">GitLab</span>
           </dd>
 
-          <dt class="text-sm text-dim">Desktop, Game and Embedded</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Electron.js</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Unity</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Arduino</span>
-            <span class="border border-line px-2 py-0.5 text-xs">ESP32</span>
+          <dt>Desktop, Game and Embedded</dt>
+          <dd>
+            <span class="tag">Electron.js</span>
+            <span class="tag">Unity</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">ESP32</span>
           </dd>
 
-          <dt class="text-sm text-dim">Operating Systems</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Linux</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Arch</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Omarchy</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Kali</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Fedora</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Zorin</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Mint</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Ubuntu</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Windows</span>
+          <dt>Operating Systems</dt>
+          <dd>
+            <span class="tag">Linux</span>
+            <span class="tag">Arch</span>
+            <span class="tag">Omarchy</span>
+            <span class="tag">Kali</span>
+            <span class="tag">Fedora</span>
+            <span class="tag">Zorin</span>
+            <span class="tag">Mint</span>
+            <span class="tag">Ubuntu</span>
+            <span class="tag">Windows</span>
           </dd>
 
-          <dt class="text-sm text-dim">Security Tools</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Burp Suite</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Wireshark</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Nmap</span>
+          <dt>Security Tools</dt>
+          <dd>
+            <span class="tag">Burp Suite</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Nmap</span>
           </dd>
 
-          <dt class="text-sm text-dim">Security Techniques</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">OSINT</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Pentesting</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Red Teaming</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Brute-force</span>
-            <span class="border border-line px-2 py-0.5 text-xs">SQL Injection</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Remote Code Execution</span>
+          <dt>Security Techniques</dt>
+          <dd>
+            <span class="tag">OSINT</span>
+            <span class="tag">Pentesting</span>
+            <span class="tag">Red Teaming</span>
+            <span class="tag">Brute-force</span>
+            <span class="tag">SQL Injection</span>
+            <span class="tag">Remote Code Execution</span>
           </dd>
-
         </dl>
 
         <!-- ===== Professional Expertise ===== -->
-        <h2 class="mt-10 border-t border-line pt-8 font-display font-bold text-xl text-accent">Professional Expertise</h2>
+        <h2 class="section-title spaced">Professional Expertise</h2>
 
-        <dl class="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-[11rem_1fr]">
-
-          <dt class="text-sm text-dim">People and Leadership</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Problem Solving</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Leadership</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Teamwork</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Team Management</span>
+        <dl class="groups">
+          <dt>People and Leadership</dt>
+          <dd>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Team Management</span>
           </dd>
 
-          <dt class="text-sm text-dim">Software Engineering</dt>
-          <dd class="flex flex-wrap gap-2">
-            <span class="border border-line px-2 py-0.5 text-xs">Software Development Life Cycle (SDLC)</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Software Requirement Specification</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Software Documentation</span>
-            <span class="border border-line px-2 py-0.5 text-xs">Software Project Management</span>
-            <span class="border border-line px-2 py-0.5 text-xs">User Interface Design</span>
+          <dt>Software Engineering</dt>
+          <dd>
+            <span class="tag">Software Development Life Cycle (SDLC)</span>
+            <span class="tag">Software Requirement Specification</span>
+            <span class="tag">Software Documentation</span>
+            <span class="tag">Software Project Management</span>
+            <span class="tag">User Interface Design</span>
           </dd>
-
         </dl>
 
       </div>
@@ -193,7 +160,7 @@
 
   </main>
 
-  <footer class="max-w-4xl mx-auto px-5 pb-10 text-sm text-dim border-t border-line pt-5">
+  <footer class="wrap site-footer">
     © 2026 Sakib Muhtasim
   </footer>
 
