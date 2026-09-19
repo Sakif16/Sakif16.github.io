@@ -254,6 +254,14 @@ a.media:hover { border-color: var(--accent); }
   .media-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+
+/* ---------- Text scramble effect ---------- */
+.scramble { position: relative; }
+.scramble-real { color: transparent; }
+.scramble-fx { position: absolute; inset: 0; }
+.scramble.done .scramble-real { color: inherit; }
+.scramble.done .scramble-fx { display: none; }
+
 @media (prefers-reduced-motion: reduce) {
   .cursor, .ping-ring { animation: none; }
   .js #photo { transition: none; }
