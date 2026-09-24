@@ -112,7 +112,7 @@ async function load() {
     return t;
   });
 
-  await sleep(300);
+  await sleep(150);
   if (photo) {
     photo.classList.add('on');
     await sleep(400);
@@ -127,9 +127,9 @@ async function load() {
     paras[i].append(node, cursor);
     for (const ch of texts[i]) {
       node.data += ch;
-      await sleep(14);
+      await sleep(6);
     }
-    await sleep(300);
+    await sleep(150);
   }
 }
 

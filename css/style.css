@@ -54,7 +54,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .accent { color: var(--accent); }
 
 /* ---------- Layout ---------- */
-.wrap { max-width: 56rem; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+.wrap { max-width: 64rem; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
 main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 
 /* ---------- Header ---------- */
@@ -121,37 +121,11 @@ main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 
 .terminal-body { padding: 1.5rem 1.25rem; }
 
-/* ---------- Home: photo + bio ---------- */
+/* ---------- Home: bio ---------- */
 .home-grid { display: grid; align-items: start; gap: 2rem; }
-
-.photo-frame {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--accent) 4%, var(--bg));
-  color: var(--dim);
-  font-size: .875rem;
-}
-.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-.photo-frame::before, .photo-frame::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 2px solid var(--accent);
-}
-.photo-frame::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
-.photo-frame::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
 
 .bio { max-width: 65ch; }
 .bio p + p { margin-top: 1rem; }
-
-/* Photo fade-in (only when JS is running) */
-.js #photo { opacity: 0; transition: opacity .6s ease; }
-.js #photo.on { opacity: 1; }
 
 /* Terminal cursor */
 .cursor {
@@ -164,7 +138,7 @@ main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 }
 @keyframes blink { 50% { opacity: 0; } }
 
-/* ---------- Timeline (experience, education, research, awards) ---------- */
+/* ---------- Timeline (experience, education, research, achievements) ---------- */
 .timeline { display: flex; flex-direction: column; gap: 2.5rem; }
 
 .entry { position: relative; padding-left: 1.5rem; border-left: 1px solid var(--line); }
@@ -186,6 +160,18 @@ main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 .bullets li { display: flex; gap: .5rem; }
 .bullets li + li { margin-top: .5rem; }
 .bullets li::before { content: ">"; color: var(--accent); }
+
+/* ---------- Achievements: photo spaces ---------- */
+.achv-content { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
+.achv-text { flex: 1 1 16rem; min-width: 0; }
+.achv-photos { display: flex; gap: .75rem; flex-shrink: 0; }
+.achv-photo {
+  width: 6rem;
+  aspect-ratio: 4 / 5;
+  border: 1px dashed var(--line);
+  background: color-mix(in srgb, var(--accent) 4%, var(--bg));
+}
+.achv-photo img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ---------- Cards (projects, sim racing and karting) ---------- */
 .cards { display: grid; gap: 1.5rem; }
@@ -221,7 +207,7 @@ main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 .two-col { display: grid; gap: 1rem; margin-top: 1.25rem; }
 .result { margin-top: .75rem; font-size: .875rem; color: var(--accent); }
 
-.media-grid { display: grid; gap: 1rem; margin-top: 1.25rem; }
+.media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.25rem; }
 .media { display: block; border: 1px solid var(--line); }
 a.media:hover { border-color: var(--accent); }
 .media .thumb {
@@ -246,12 +232,12 @@ a.media:hover { border-color: var(--accent); }
 @media (min-width: 640px) {
   .terminal-body { padding: 1.5rem; }
   .intro h1 { font-size: 3.75rem; }
-  .home-grid { grid-template-columns: 13rem 1fr; }
   .groups { grid-template-columns: 11rem 1fr; }
-  .two-col, .media-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: repeat(2, 1fr); }
+  .media-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (min-width: 1024px) {
-  .media-grid { grid-template-columns: repeat(3, 1fr); }
+  .media-grid { grid-template-columns: repeat(6, 1fr); }
 }
 
 
@@ -264,5 +250,4 @@ a.media:hover { border-color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
   .cursor, .ping-ring { animation: none; }
-  .js #photo { transition: none; }
 }
